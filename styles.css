@@ -1,3 +1,35 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+
+}
+
+h1 {
+    margin: 5px;
+    
+}
+
+.nav-container {
+    background-color: rgba(67, 140, 224, 0.473);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+button {
+    height: 80%;
+    background-color: transparent;
+    border: none;
+    align-self: center;
+}
+
+button:hover {
+    background-color: rgba(67, 140, 224, 0.249);
+    border-radius: 5px;
+}
