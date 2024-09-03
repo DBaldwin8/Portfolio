@@ -8,7 +8,8 @@ body {
 
 h1 {
     margin: 5px;
-    
+    font-family: Handjet;
+    letter-spacing: 1px;
 }
 
 .nav-container {
@@ -32,4 +33,24 @@ button {
 button:hover {
     background-color: rgba(67, 140, 224, 0.249);
     border-radius: 5px;
+}
+
+.about-text{
+    padding: 0 5%;
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    background-color: rgba(0, 179, 255, 0.383);
+    border-radius: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px
+}
+
+footer-container{
+    background-color: aqua;
+    height
 }
