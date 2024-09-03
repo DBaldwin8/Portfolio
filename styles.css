@@ -43,24 +43,47 @@ button:hover {
 }
 
 .about-text{
-    padding: 0 5%;
-    width: 40%;
-    position: absolute;
-    top: 30%;
-    left: 10%;
+    width: 40%; ;
+    position: relative;
+    top: 325px;
+    left: 15%;
     background-color: rgba(0, 179, 255, 0.383);
     border-radius: 20px;
+}
 
+.about-text div{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
 }
 
 .about-skills {
     width: 25%;
-    position: absolute;
-    top: 32%;
+    height: 160px;
+    position: relative;
+    top: 150px;
     left: 60%;
     background-color: rgba(11, 144, 201, 0.383);
     border-radius: 20px;
 }
+
+/*
+.project-details {
+    padding-left:  8%;
+    width: 40%;
+    background-color: rgba(0, 179, 255, 0.383);
+    border-radius: 20px;
+}
+
+.project-skills {
+    width: 25%;
+    background-color: rgba(11, 144, 201, 0.383);
+    border-radius: 20px;
+    position: relative;
+    top: 300px;
+}
+
+*/
 
 li {
     list-style-type: none;
