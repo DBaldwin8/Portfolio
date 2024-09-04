@@ -23,7 +23,6 @@ h1 {
     color: black;
 }
 
-
 .nav-container {
     
     height: 40px;
@@ -75,6 +74,14 @@ footer {
 
 .bar-background {
     background-color: rgba(67, 140, 224, 0.7);
+}
+
+.contact-info{
+
+}
+
+.git-logo {
+    width: 15%;
 }
 
 /*** ABOUT ***/
