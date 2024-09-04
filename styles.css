@@ -30,6 +30,11 @@ h1 {
     color: black;
 }
 
+h1:hover {
+    background-color: rgba(67, 140, 224, 0.249);
+    padding: 3px;
+}
+
 .nav-container {
     height: 40px;
     width: 100%;
@@ -38,9 +43,9 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     border-radius: 0px 0px 10px 10px;
-    z-index: 1;
 }
 
+/* currently commented out in html, was original idea.
 button {
     height: 80%;
     background-color: transparent;
@@ -59,6 +64,7 @@ button:hover {
     background-color: rgba(67, 140, 224, 0.249);
     border-radius: 5px;
 }
+*/
 
 /*** FOOTER ***/
 
@@ -94,7 +100,7 @@ footer {
     margin-left: 10px;
 }
 
-/* breaks usage agreement
+/* breaks usage license
 .git-logo:hover {
     filter: invert(75%) sepia(92%) saturate(1268%) hue-rotate(106deg) brightness(110%) contrast(109%);
 }
