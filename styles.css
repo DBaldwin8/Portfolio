@@ -111,18 +111,21 @@ footer {
     height: 750px;
     width: 100%;
 }
-
 .hover {
-    border: solid blue;
-    width: 60%;
+    width: 75%;
     height: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+}
+
+.hover:hover{
+    transition-duration: 1s;
+    opacity: 1;
 }
 
 .project-text-container{
-    border: solid red;
     display: flex;
     justify-content: center;
     gap: 40px;
