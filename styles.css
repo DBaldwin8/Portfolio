@@ -98,7 +98,7 @@ footer {
     margin-left: 10px;
 }
 
-/* breaks usage license
+/* breaks usage
 .git-logo:hover {
     filter: invert(75%) sepia(92%) saturate(1268%) hue-rotate(106deg) brightness(110%) contrast(109%);
 }
@@ -129,7 +129,6 @@ footer {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .about-bubble h2 {
@@ -192,7 +191,7 @@ footer {
     padding-left:  8%;
     padding-right: 2%;
     width: 40%;
-    height: 160px;
+    height: 100%;
     background-color: rgba(0, 179, 255, 0.383);
     border-radius: 20px;
 }
@@ -212,8 +211,24 @@ li {
 
 @media screen and (max-width:600px) {
     
-    .bubble-container {
-        border: 5px solid green;   
+    .bubble-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-bubble {
+        margin-right: 50px;
+    }
+
+    .about-skills {
+        width: 30%;
+        height: 185px;
+        margin-left: 120px;
+    }
+
+    .project-details {
+        height: 100%;
     }
 
 }
