@@ -3,7 +3,7 @@
 }
 
 body {
-    text-shadow: 0px 0px 10px white;
+    text-shadow: 0px 0px 2px white;
 }
 
 h1 {
@@ -48,34 +48,34 @@ button:hover {
 }
 
 .background-image-container {
-    height: 600px;
+    height: 750px;
     background-image: url("./Images/about_background.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
 }
 
-.about-background-image{
-
+.bubble-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 40px;
 }
 
-.about-text{
+.about-bubble{
     width: 40%; ;
-    background-color: rgba(0, 179, 255, 0.4);
+    height: 200px;
+    background-color: rgba(0, 179, 255, 0.6);
     border-radius: 20px;
     display: flex;
-    
-}
-
-.about-text div{
-    padding-left: 5%;
-    display: flex;
     flex-direction: column;
+    padding-left: 5%;
 }
 
 .about-skills {
-    width: 25%;
-    height: 160px;
-    background-color: rgba(11, 144, 201, 0.4);
+    width: 30%;
+    height: 175px;
+    background-color: rgba(11, 144, 201, 0.6);
     border-radius: 20px;
 }
 
@@ -84,7 +84,11 @@ button:hover {
     flex-direction: column;
 }
 
-.placeholder {
+.placeholder-image-container {
+    background-image: url("./Images/placeholder.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
 }
 
 .project-details {
