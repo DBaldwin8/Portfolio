@@ -58,9 +58,13 @@ button:hover {
 
 footer {
     width: 100%;
-    height: 35px;
+    height: 40px;
     position: fixed;
     bottom: 0px
+}
+
+.bar-background {
+    background-color: rgba(67, 140, 224, 0.7);
 }
 
 .footer-container{
@@ -72,17 +76,23 @@ footer {
     border-radius: 10px 10px 0px 0px;
 }
 
-.bar-background {
-    background-color: rgba(67, 140, 224, 0.7);
-}
-
 .contact-info{
-
+    height: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .git-logo {
-    width: 15%;
+    height: 30px;
+    margin-left: 10px;
 }
+
+/* breaks usage agreement
+.git-logo:hover {
+    filter: invert(75%) sepia(92%) saturate(1268%) hue-rotate(106deg) brightness(110%) contrast(109%);
+}
+*/
 
 /*** ABOUT ***/
 
@@ -109,11 +119,17 @@ footer {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding-left: 5%;
+    
 }
 
-h2 {
+.about-bubble h2 {
+    padding-left: 8%;
     margin-top: 5%;
+}
+
+.about-bubble p {
+    padding-left: 20%;
+    margin-top: 0%
 }
 
 .about-skills {
