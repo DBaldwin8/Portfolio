@@ -117,7 +117,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .hover:hover{
@@ -134,7 +134,7 @@ footer {
 .project-details {
     padding-left:  8%;
     width: 40%;
-    height: 200px;
+    height: 160px;
     background-color: rgba(0, 179, 255, 0.383);
     border-radius: 20px;
 }
