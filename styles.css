@@ -12,6 +12,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.suse {
+    font-family: SUSE;
+    font-weight: 300;
+}
+
 /*** NAV ***/
 
 a {
