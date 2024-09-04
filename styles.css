@@ -124,7 +124,7 @@ footer {
 
 .about-bubble{
     width: 40%; ;
-    height: 200px;
+    padding-bottom: 5%;
     background-color: rgba(50, 214, 255, 0.75);
     border-radius: 20px;
     display: flex;
@@ -143,7 +143,7 @@ footer {
 
 .about-skills {
     width: 30%;
-    height: 175px;
+    height: 100%;
     background-color: rgba(119, 214, 255, 0.75);
     border-radius: 20px;
 }
@@ -198,7 +198,8 @@ footer {
 
 .project-skills {
     width: 50%;
-    height: 300px;
+    height: 100%;
+    padding-bottom: 5%;
     background-color: rgba(11, 144, 201, 0.383);
     border-radius: 20px;
     display: flex;
@@ -210,7 +211,9 @@ li {
 }
 
 @media screen and (max-width:600px) {
-    
+
+    /*** About ***/
+
     .bubble-container{
         flex-direction: column;
         align-items: center;
@@ -219,6 +222,7 @@ li {
 
     .about-bubble {
         margin-right: 50px;
+        height: 100%
     }
 
     .about-skills {
@@ -226,6 +230,8 @@ li {
         height: 185px;
         margin-left: 120px;
     }
+
+    /*** Projects ***/
 
     .project-details {
         height: 100%;
