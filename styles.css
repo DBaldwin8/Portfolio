@@ -155,7 +155,7 @@ footer {
     flex-direction: column;
 }
 
-.placeholder-image-container {
+.project-image-container {
     background-image: url("./Images/placeholder.png");
     background-size: cover;
     background-position: center;
@@ -198,7 +198,6 @@ footer {
 
 .project-skills {
     width: 50%;
-    height: 100%;
     padding-bottom: 5%;
     background-color: rgba(11, 144, 201, 0.383);
     border-radius: 20px;
@@ -233,8 +232,19 @@ li {
 
     /*** Projects ***/
 
-    .project-details {
-        height: 100%;
+    .project-image-container{
+        background: lightblue;
+        border: 3px solid rgb(116, 201, 235)
+    }
+
+       .hover {
+        align-items: flex-end;
+    }
+
+    .project-text-container{
+        display: flex;
+        flex-direction: row;
+        ;
     }
 
 }
