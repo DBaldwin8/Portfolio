@@ -19,12 +19,12 @@ html{
 
 /*** SNAP SCROLL ***/
 
-.container {
+.snap-container {
     scroll-snap-type: y mandatory;
 }
 
-.child {
-  scroll-snap-align: start;
+.snap-child {
+    scroll-snap-align: start;
 }
 
 /*** NAV ***/
