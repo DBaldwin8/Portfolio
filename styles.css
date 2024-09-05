@@ -5,6 +5,7 @@
 html {
     scrollbar-gutter: auto;
 }
+
 /*** FONTS ***/
 
 .suse {
@@ -29,15 +30,14 @@ html {
 .snap-child {
     scroll-snap-align: start;
 }
-/*
+
 .no-scrollbar {
     -ms-overflow-style: none; /* for Internet Explorer Edge */
-    scrollbar-width: none; /* for Firefox *//*
+    scrollbar-width: none; /* for Firefox */
 }
 .noscrollbar::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera *//*
+    display: none; /* for Chrome, Safari, and Opera */
 }
-*/
 /*** NAV ***/
 
 a {
@@ -286,11 +286,12 @@ h4 {
 
     .project-image-container{
         background: lightblue;
-        border: 3px solid rgb(116, 201, 235)
+        border: 3px solid rgb(116, 201, 235);
+        padding-bottom: 0;
     }
 
     .hover {
-        flex-wrap: wrap;
+        flex-direction: column;
         opacity: 1;
     }
 
@@ -301,23 +302,22 @@ h4 {
     }
     
     .project-text-container{
-        gap: 5%
+        gap: 5%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .project-details {
-        padding-right: 4%;
-        padding-bottom: 5px;
+       /* padding-right: 4%;
+        padding-bottom: 5px;*/
+        width: 90%;
     }
 
     .project-skills{
-        padding-right: 2%;
+        /*padding-right: 2%;*/
+        width: 90%;
+        height: 60%;
     }
 
-}
-
-@media screen and (max-width:420px) {
-
-    .project-image-container {
-        padding-bottom: 25%;
-    }
 }
