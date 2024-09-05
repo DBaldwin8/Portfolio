@@ -220,6 +220,7 @@ li {
     display: none;
     border: 7px solid rgb(116, 201, 235);
     border-radius: 10%;
+    margin-bottom: 10px;
 }
 
 
@@ -254,12 +255,19 @@ li {
        .hover {
         flex-wrap: wrap;
         opacity: 1;
-
     }
 
     .project-text-container{
         display: flex;
         flex-direction: row;
+    }
+
+    .project-details {
+
+    }
+
+    .project-skills{
+
     }
 
     .responsive-thumbnail {
