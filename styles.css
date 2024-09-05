@@ -216,6 +216,13 @@ li {
     display: flex;
 }
 
+.responsive-thumbnail {
+    display: none;
+    border: 7px solid rgb(116, 201, 235);
+    border-radius: 10%;
+}
+
+
 @media screen and (max-width:600px) {
 
     /*** About ***/
@@ -245,18 +252,19 @@ li {
     }
 
        .hover {
-        align-items: flex-end;
+        flex-wrap: wrap;
         opacity: 1;
-        border: solid red
-    }
 
-    .project-image-1 .hover::before{
-        content: url(./Images/placeholder.png);
     }
 
     .project-text-container{
         display: flex;
         flex-direction: row;
+    }
+
+    .responsive-thumbnail {
+        display: flex;
+        width: 100%;
     }
 
 }
