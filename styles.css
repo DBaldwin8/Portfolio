@@ -2,17 +2,29 @@
     box-sizing: border-box;
 }
 
-.text-shadow {
-    text-shadow: 0px 0px 5px rgb(255, 255, 255);
-}
-
 html{
     scroll-behavior: smooth;
 }
 
+/*** FONTS ***/
+
 .suse {
     font-family: SUSE;
     font-weight: 300;
+}
+
+.text-shadow {
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+/*** SNAP SCROLL ***/
+
+.container {
+    scroll-snap-type: y mandatory;
+}
+
+.child {
+  scroll-snap-align: start;
 }
 
 /*** NAV ***/
