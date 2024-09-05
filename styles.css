@@ -20,6 +20,9 @@ html{
 /*** SNAP SCROLL ***/
 
 .snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
 }
 
@@ -120,7 +123,6 @@ footer {
 
 .background-image-container {
     height: 100vh;
-    width: 100%;
     background-image: url("./Images/about_background.jpg");
     background-size: cover;
     background-position: center;
