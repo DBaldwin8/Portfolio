@@ -230,6 +230,7 @@ ul {
     background-color: rgba(11, 144, 201, 0.383);
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -237,8 +238,8 @@ li {
     display: flex;
 }
 
-ul>h4 {
-    margin-right:5px;
+h4 {
+    margin-left: 10%;
 }
 
 .responsive-thumbnail {
