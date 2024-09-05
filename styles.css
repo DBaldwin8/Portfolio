@@ -155,8 +155,15 @@ footer {
     flex-direction: column;
 }
 
-.project-image-container {
+.project-image-1{
     background-image: url("./Images/placeholder.png");
+}
+
+.project-image-2{
+    background-image: url("./Images/placeholder.png");
+}
+
+.project-image-container {
     background-size: cover;
     background-position: center;
     display: flex;
@@ -239,12 +246,17 @@ li {
 
        .hover {
         align-items: flex-end;
+        opacity: 1;
+        border: solid red
+    }
+
+    .project-image-1 .hover::before{
+        content: url(./Images/placeholder.png);
     }
 
     .project-text-container{
         display: flex;
         flex-direction: row;
-        ;
     }
 
 }
