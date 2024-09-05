@@ -321,3 +321,67 @@ h4 {
     }
 
 }
+
+/*** ASK CAT why not to use: ***/
+@media (orientation: portrait) {
+
+    /*** About ***/
+
+    .bubble-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-bubble {
+        margin-right: 50px;
+        height: 100%;
+        min-width: 250px;
+    }
+
+    .about-skills {
+        width: 30%;
+        min-width: 200px;
+        height: 185px;
+        margin-left: 120px;
+    }
+
+    /*** Projects ***/
+
+    .project-image-container{
+        background: lightblue;
+        border: 3px solid rgb(116, 201, 235);
+        padding-bottom: 0;
+    }
+
+    .hover {
+        flex-direction: column;
+        opacity: 1;
+    }
+
+    .responsive-thumbnail {
+        display: flex;
+        object-fit: contain;
+        height: 50%;
+    }
+    
+    .project-text-container{
+        gap: 5%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .project-details {
+       /* padding-right: 4%;
+        padding-bottom: 5px;*/
+        width: 90%;
+    }
+
+    .project-skills{
+        /*padding-right: 2%;*/
+        width: 90%;
+        height: 60%;
+    }
+
+}
