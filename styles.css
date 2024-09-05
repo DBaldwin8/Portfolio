@@ -256,8 +256,8 @@ li {
     .responsive-thumbnail {
         display: flex;
         align-self: flex-start;
-        object-fit: cover;
-        width: 100%;
+        object-fit: contain;
+        height: 50%;
     }
     
     .hover {
