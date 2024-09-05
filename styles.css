@@ -143,9 +143,13 @@ footer {
 
 .about-skills {
     width: 30%;
-    height: 100%;
     background-color: rgba(119, 214, 255, 0.75);
     border-radius: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
 }
 
 /*** PROJECTS ***/
@@ -173,6 +177,7 @@ footer {
     align-items: center;
     height: 100vh;
     width: 100%;
+    padding-bottom: 5%;
 }
 
 .hover {
@@ -269,7 +274,7 @@ ul>h4 {
     }
     
     .project-text-container{
-
+        gap: 5%
     }
 
     .project-details {
@@ -280,5 +285,12 @@ ul>h4 {
     .project-skills{
         padding-right: 2%;
     }
+
+}
+
+
+@media screen and (max-width:420) {
+
+    
 
 }
