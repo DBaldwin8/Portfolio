@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-gutter: auto;
+}
 /*** FONTS ***/
 
 .suse {
@@ -14,20 +17,25 @@
 }
 
 /*** SCROLLING ***/
-/*
-.smooth-scroll{
-    scroll-behavior: smooth;
-}
-*/
+
 .snap-container {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    scroll-margin: 0;
 }
 
 .snap-child {
     scroll-snap-align: start;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none; /* for Internet Explorer Edge */
+    scrollbar-width: none; /* for Firefox */
+}
+.noscrollbar::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
 
 /*** NAV ***/
