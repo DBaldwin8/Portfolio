@@ -218,10 +218,14 @@ li {
     display: flex;
 }
 
+ul>h4 {
+    margin-right:5px;
+}
+
 .responsive-thumbnail {
     display: none;
     border: 7px solid rgb(116, 201, 235);
-    border-radius: 10%;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
@@ -253,29 +257,32 @@ li {
         border: 3px solid rgb(116, 201, 235)
     }
 
+    .hover {
+        flex-wrap: wrap;
+        opacity: 1;
+    }
+
     .responsive-thumbnail {
         display: flex;
-        align-self: flex-start;
         object-fit: contain;
         height: 50%;
     }
     
-    .hover {
-        flex-wrap: wrap;
-        opacity: 1;
-        border: 3px solid green
-    }
-
     .project-text-container{
-        border: 3px solid red;
+
     }
 
     .project-details {
         padding-right: 4%;
+        padding-bottom: 5px;
     }
 
     .project-skills{
-        
+        padding-right: 2%;
+    }
+
+    .project-details p{
+
     }
 
 }
