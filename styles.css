@@ -117,11 +117,9 @@ footer {
     margin-left: 10px;
 }
 
-
 .git-logo:hover {
     filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(175%) hue-rotate(183deg) brightness(83%) contrast(92%);
 }
-
 
 /*** ABOUT ***/
 
@@ -305,13 +303,10 @@ h4 {
     }
 
     .project-details {
-       /* padding-right: 4%;
-        padding-bottom: 5px;*/
         width: 90%;
     }
 
     .project-skills{
-        /*padding-right: 2%;*/
         width: 90%;
         height: 60%;
     }
