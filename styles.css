@@ -121,11 +121,11 @@ footer {
     margin-left: 10px;
 }
 
-/* breaks usage
+
 .git-logo:hover {
-    filter: invert(75%) sepia(92%) saturate(1268%) hue-rotate(106deg) brightness(110%) contrast(109%);
+    filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(175%) hue-rotate(183deg) brightness(83%) contrast(92%);
 }
-*/
+
 
 /*** ABOUT ***/
 
