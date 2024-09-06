@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scrollbar-gutter: auto;
-}
-
 /*** FONTS ***/
 
 .suse {
