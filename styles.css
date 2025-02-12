@@ -1,0 +1,21 @@
+
+
+.hero-container {
+    background-color: black;
+    color: lime;
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+.hero-subcontainer {
+    border: 2px solid lime;
+    width: 1000px;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-subcontainer h1{
+    font-size: 72pt;
+    margin: 0;
+}
