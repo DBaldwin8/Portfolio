@@ -4,12 +4,26 @@
 //     location.reload();
 //   }, 1500);
 
-const KeyTap = new Audio() 
+
 let i = 0;
+
+function cursorBlink(cursorId) {
+    let cursor = false;
+    let speed = 250;
+    setInterval(() => {
+        if (!cursor) {
+            document.getElementById(cursorId).style.opacity = 1;
+            cursor = true;
+        } else {
+            document.getElementById(cursorId).style.opacity = 0;
+            cursor = false;
+        }
+    }, speed);
+}
 
 function typing(string, selectorId) {
     if (i < string.length) {
-        document.getElementById(selectorId).innerHTML += string.charAt(i);
+        document.getElementById(selectorId).insertAdjacentText('beforebegin', string.charAt(i));
         i++;
         setTimeout(function () { typing(string, selectorId) }, 150);
     } else {
@@ -17,10 +31,13 @@ function typing(string, selectorId) {
     }
 }
 
+
 window.onload = function () {
-    setTimeout(function () { typing("Hello World,", "hello") }, 1000);
-    setTimeout(function () { typing("My name is Darren Baldwin", "name") }, 3500);
-    setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst") }, 7500);
+    cursorBlink('hello-cursor');
+    setTimeout(function () { typing("Hello World,", "hello-cursor") }, 1000);
+
+    setTimeout(function () { typing("My name is Darren Baldwin", "name-cursor") }, 3500);
+    setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst-cursor") }, 7500);
 }
 
 // function typing(string) {

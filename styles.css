@@ -15,7 +15,17 @@
     border-radius: 10px;
 }
 
-.hero-subcontainer h1{
+.hero-subcontainer>h1{
     font-size: 72pt;
     margin: 0;
+}
+
+#hello-cursor,
+#fst-cursor {
+    font-size: 30px;
+    opacity: 0;
+}
+
+#name-cursor {
+    font-size: 100px;
 }
