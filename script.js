@@ -8,7 +8,7 @@ let i = 0;
 
 function typing(string, selectorId) {
     if (i < string.length) {
-        document.getElementById(selectorId).innerHTML += string.charAt(i);
+        document.getElementById(selectorId).textContent += string.charAt(i);
         i++;
         setTimeout(function () { typing(string, selectorId) }, 150);
     } else {
