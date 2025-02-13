@@ -4,6 +4,7 @@
 //     location.reload();
 //   }, 1500);
 
+const KeyTap = new Audio() 
 let i = 0;
 
 function typing(string, selectorId) {
@@ -16,7 +17,7 @@ function typing(string, selectorId) {
     }
 }
 
-window.onload = async function () {
+window.onload = function () {
     setTimeout(function () { typing("Hello World,", "hello") }, 1000);
     setTimeout(function () { typing("My name is Darren Baldwin", "name") }, 3500);
     setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst") }, 7500);
