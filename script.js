@@ -4,7 +4,6 @@
 //     location.reload();
 //   }, 1500);
 
-const KeyTap = new Audio() 
 let i = 0;
 
 function typing(string, selectorId) {
