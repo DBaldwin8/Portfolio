@@ -20,15 +20,13 @@ function typing(string, selectorId) {
 
 /******** Onload instructions ********/
 
+const deviceHeight = window.innerHeight;
+
 window.onload = function () {
     setTimeout(function () { typing("Hello World,", "hello") }, 1000);
     setTimeout(function () { typing("My name is Darren Baldwin", "name") }, 3500);
-    setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst") }, 7500)
-    setTimeout(Window.scroll({
-        top: ,
-        left: ,
-        behavior: "smooth"
-    }))
+    setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst") }, 7500);
+    setTimeout(function () { window.scroll(0, deviceHeight)},1000);
 }
 
 // function typing(string) {

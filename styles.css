@@ -1,4 +1,6 @@
-
+body {
+    scroll-behavior: smooth;
+}
 
 .hero-container {
     background-color: black;
@@ -19,4 +21,8 @@
 .hero-subcontainer h1{
     font-size: 72pt;
     margin: 0;
+}
+
+.next-div {
+    height: 100vh;
 }
