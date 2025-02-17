@@ -2,25 +2,24 @@
 
 /******** Typing function ********/
 
-function typing(string, selectorId) {
-    let i = 0;
-    function typeCharacter() {
-        if (i < string.length) {
-            document.getElementById(selectorId).textContent += string.charAt(i);
-            i++;
-            setTimeout(typeCharacter, 150);
-        }
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function typing(string, selectorId) {
+    for (let i = 0; i < string.length; i++) {
+        document.querySelector(selectorId).textContent += string.charAt(i);
+        await delay(150); // delay for each character
     }
-    typeCharacter();
+    await delay(500); // delay to the next call.
 }
 
 /******** Onload instructions ********/
 
-const deviceHeight = window.innerHeight;
-
-window.onload = function () {
-    setTimeout(function () { typing("Hello World,", "hello") }, 1000);
-    setTimeout(function () { typing("My name is Darren Baldwin", "name") }, 3500);
-    setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst") }, 7500);
-    setTimeout(function () { window.scroll(0, deviceHeight) }, 13000);
+window.onload = async function () {
+    await delay(1000);
+    await typing("Hello World,", "#hello");
+    await typing("My name is Darren Baldwin", "#name");
+    await typing("and I am a FULL STACK DEVELOPER.", "#fst");
+    await document.querySelector(".next-div").scrollIntoView(true);
 }
