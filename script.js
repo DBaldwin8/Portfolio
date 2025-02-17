@@ -11,7 +11,7 @@ async function typing(string, selectorId) {
         document.querySelector(selectorId).textContent += string.charAt(i);
         await delay(150); // delay for each character
     }
-    await delay(500); // This is the delay to the next call.
+    await delay(500); // delay to the next call.
 }
 
 /******** Onload instructions ********/
