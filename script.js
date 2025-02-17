@@ -1,9 +1,5 @@
 'use strict'
 
-// setTimeout(() => {
-//     location.reload();
-//   }, 1500);
-
 /******** Typing function ********/
 
 
@@ -23,7 +19,6 @@ async function typing(string, selectorId) {
     });
 };
 
-
 /******** Onload instructions ********/
 
 const deviceHeight = window.innerHeight;
@@ -34,22 +29,3 @@ window.onload = async function () {
     await typing("and I am a FULL STACK DEVELOPER.", "fst");
     await window.scroll(0, deviceHeight);
 }
-
-
-// function typing(string) {
-//     if (i < 12) {
-//         document.getElementById("hello").innerHTML += string.charAt(i);
-//         i++;
-//         setTimeout(function () { typing(string) }, speed);
-//     } else if (i < string.length) {
-//         document.getElementById("name").innerHTML += string.charAt(i);
-//         i++;
-//         setTimeout(function () { typing(string) }, speed);
-//     }
-// }
-
-// window.onload = function () {
-//     setTimeout(function () { 
-//         typing("Hello World, My name is Darren Baldwin and I am a FULL STACK DEVELOPER") }
-//         , 1000);
-// }
