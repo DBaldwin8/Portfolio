@@ -6,9 +6,9 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function typing(string, selectorId) {
+async function typing(string, selector) {
     for (let i = 0; i < string.length; i++) {
-        document.querySelector(selectorId).textContent += string.charAt(i);
+        document.querySelector(selector).textContent += string.charAt(i);
         await delay(150); // delay for each character
     }
     await delay(500); // delay to the next call.
