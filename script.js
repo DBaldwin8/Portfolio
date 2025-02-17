@@ -6,28 +6,35 @@
 
 /******** Typing function ********/
 
-let i = 0;
 
-function typing(string, selectorId) {
-    if (i < string.length) {
-        document.getElementById(selectorId).textContent += string.charAt(i);
-        i++;
-        setTimeout(function () { typing(string, selectorId) }, 150);
-    } else {
-        i = 0;
-    }
-}
+async function typing(string, selectorId) {
+    return new Promise((resolve) => {
+        let i = 0;
+        function typeCharacter() {
+            if (i < string.length) {
+                document.getElementById(selectorId).textContent += string.charAt(i);
+                i++;
+                setTimeout(typeCharacter, 150);
+            } else {
+                resolve();
+            }
+        }
+        typeCharacter();
+    });
+};
+
 
 /******** Onload instructions ********/
 
 const deviceHeight = window.innerHeight;
 
-window.onload = function () {
-    setTimeout(function () { typing("Hello World,", "hello") }, 1000);
-    setTimeout(function () { typing("My name is Darren Baldwin", "name") }, 3500);
-    setTimeout(function () { typing("and I am a FULL STACK DEVELOPER.", "fst") }, 7500);
-    setTimeout(function () { window.scroll(0, deviceHeight)},1000);
+window.onload = async function () {
+    await typing("Hello World,", "hello");
+    await typing("My name is Darren Baldwin", "name");
+    await typing("and I am a FULL STACK DEVELOPER.", "fst");
+    await window.scroll(0, deviceHeight);
 }
+
 
 // function typing(string) {
 //     if (i < 12) {
