@@ -12,7 +12,7 @@ async function typing(string, selectorId) {
                 i++;
                 setTimeout(typeCharacter, 150);
             } else {
-                resolve();
+                setTimeout(resolve, 1000);
             }
         }
         typeCharacter();
@@ -25,7 +25,7 @@ const deviceHeight = window.innerHeight;
 
 window.onload = async function () {
     await typing("Hello World,", "hello");
-    await typing("My name is Darren Baldwin", "name");
-    await typing("and I am a FULL STACK DEVELOPER.", "fst");
+    await typing("My name is ", "name");
+    await typing("and I am a .", "fst");
     await window.scroll(0, deviceHeight);
 }
