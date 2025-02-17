@@ -18,17 +18,17 @@
 //     });
 // };
 
-async function typing(string, selectorId) {
-    return new Promise((resolve) => {
-        function typeCharacter(i) {
-            document.getElementById(selectorId).textContent += string.charAt(i);
-        }
-        for (let i = 0; i < string.length; i++) {
-            setTimeout(function () {typeCharacter(i)}, i*150);
-        }
-        setTimeout(resolve, string.length * 150 + 1000); // This is the delay to the next call.
-    })
+function delay(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function typing(string, selectorId) {
+        for (let i = 0; i < string.length; i++) {
+            document.getElementById(selectorId).textContent += string.charAt(i);
+            await delay(150); //  increasing delay for each character
+        }
+        await delay(1000); // This is the delay to the next call.
+    }
 
 /******** Onload instructions ********/
 
