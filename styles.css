@@ -32,3 +32,17 @@ nav {
     display: flex;
     justify-content: space-around;
 }
+
+.ppf-outer-container {
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+
+.ppf-inner-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 30%;
+    text-align: center;
+}
