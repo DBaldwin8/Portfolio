@@ -30,17 +30,19 @@ nav {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid yellow;
     height: 100vh;
     padding: 100px;
 }
 
 .ppf-outer-container {  
-    border: 5px solid blue;
     display: flex;
     width: 1200px;
     justify-content: space-between;
@@ -48,10 +50,11 @@ nav {
 }
 
 .ppf-inner-container {
-    border: 5px solid red;
     width: 350px;
     text-align: center;
 }
 
-.ppf-inner-container > p {
+.ppf-inner-container > h4 {
+    font-size: 2.5em;
+    margin: 30px 0;
 }
