@@ -27,6 +27,7 @@ nav {
     display: flex;
     top: 0;
     justify-content: space-around;
+    align-items: center;
 }
 
 .about {
