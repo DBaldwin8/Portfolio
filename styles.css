@@ -15,34 +15,42 @@
     margin: 0px auto;
     padding: 20px;
     border-radius: 10px;
-    /* height: 400px; */
 }
 
-.hero-subcontainer h1{
+h1{
     font-size: 72pt;
     margin: 0;
-}
-
-.next-div {
-    height: 100vh;
 }
 
 nav {
     position: sticky;
     display: flex;
+    top: 0;
     justify-content: space-around;
 }
 
-.ppf-outer-container {
-    display:flex;
-    justify-content: space-evenly;
-    
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid yellow;
+    height: 100vh;
+    padding: 100px;
+}
+
+.ppf-outer-container {  
+    border: 5px solid blue;
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin: 60px;
 }
 
 .ppf-inner-container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid red;
-    width: 30%;
+    border: 5px solid red;
+    width: 350px;
     text-align: center;
+}
+
+.ppf-inner-container > p {
 }

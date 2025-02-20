@@ -21,5 +21,5 @@ window.onload = async function () {
     await typing("Hello World,", "#hello");
     await typing("My name is Darren Baldwin", "#name");
     await typing("and I am a FULL STACK DEVELOPER.", "#fst");
-    await document.querySelector(".next-div").scrollIntoView(true);
+    await document.querySelector("#about").scrollIntoView(true);
 }
