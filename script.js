@@ -25,12 +25,13 @@ window.onload = async function () {
 }
 
 window.addEventListener('scroll', function () {
-    fadeIn(".hero-container", ".about-section")
+    fadeIn(".hero-container", "#past")
+    fadeIn(".hero-container", "#present")
+    fadeIn(".hero-container", "#future")
+
 });
 
 /******** Transitions ********/
-
-/*** Fade ***/
 
 function fadeIn(passedElement, fadeElement) {
     const scrollActivator = document.querySelector(passedElement);
