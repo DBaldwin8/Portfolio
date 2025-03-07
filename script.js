@@ -25,9 +25,9 @@ window.onload = async function () {
 }
 
 window.addEventListener('scroll', function () {
-    fadeIn(".hero-container", "#past")
-    fadeIn(".hero-container", "#present")
-    fadeIn(".hero-container", "#future")
+    setTimeout( function () {fadeIn(".hero-container", "#past")}, 500);
+    setTimeout( function () {fadeIn(".hero-container", "#present")}, 1000);
+    setTimeout( function () {fadeIn(".hero-container", "#future")}, 1500);
 
 });
 
