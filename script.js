@@ -24,17 +24,17 @@ window.onload = async function () {
     await document.querySelector("#about").scrollIntoView(true);
 }
 
-window.addEventListener('scroll', fadeIn);
+window.addEventListener('scroll', fadeIn(".hero-container", ".about-section"));
 
 /******** Transitions ********/
 
 /*** Fade ***/
 
-const heroContainer = document.querySelector(".hero-container");
-const aboutContainer = document.querySelector(".about-section ");
+function fadeIn(passedElement, fadeElement) {
+    const scrollActivator = document.querySelector(passedElement);
+    const elementToFade = document.querySelector(fadeElement);
 
-function fadeIn() {
-    if (document.body.scrollHeight > heroContainer.scrollHeight) {
-        aboutContainer.style.opacity = 1;
+    if (document.body.scrollHeight > scrollActivator.scrollHeight) {
+        elementToFade.style.opacity = 1;
     }
 }
