@@ -23,3 +23,18 @@ window.onload = async function () {
     await typing("and I am a FULL STACK DEVELOPER.", "#fst");
     await document.querySelector("#about").scrollIntoView(true);
 }
+
+window.addEventListener('scroll', fadeIn);
+
+/******** Transitions ********/
+
+/*** Fade ***/
+
+const heroContainer = document.querySelector(".hero-container");
+const aboutContainer = document.querySelector(".about-section ");
+
+function fadeIn() {
+    if (document.body.scrollHeight > heroContainer.scrollHeight) {
+        aboutContainer.style.opacity = 1;
+    }
+}
