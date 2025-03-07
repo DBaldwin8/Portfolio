@@ -14,7 +14,7 @@ async function typing(string, selector) {
     await delay(500); // delay to the next call.
 }
 
-/******** Onload instructions ********/
+/******** events ********/
 
 window.onload = async function () {
     await delay(1000);
@@ -24,7 +24,9 @@ window.onload = async function () {
     await document.querySelector("#about").scrollIntoView(true);
 }
 
-window.addEventListener('scroll', fadeIn(".hero-container", ".about-section"));
+window.addEventListener('scroll', function () {
+    fadeIn(".hero-container", ".about-section")
+});
 
 /******** Transitions ********/
 
