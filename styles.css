@@ -66,6 +66,6 @@ a {
     opacity: 0;
     transition: opacity 5s, transform 1s;
     overflow: hidden;
-    transform: scaleY(0);
+    transform: translate(0, 100px);
     transform-origin: 0% 100%;
 }

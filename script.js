@@ -39,6 +39,6 @@ function fadeIn(passedElement, fadeElement) {
 
     if (document.body.scrollHeight > scrollActivator.scrollHeight) {
         elementToFade.style.opacity = 1;
-        elementToFade.style.transform = "scaleY(1)";
+        elementToFade.style.transform = "translate(0, 0)";
     }
 }
