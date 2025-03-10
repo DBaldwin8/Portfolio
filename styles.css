@@ -69,5 +69,4 @@ a {
     transition: opacity 3s, transform 1s;
     overflow: hidden;
     transform: translate(0, 100px);
-    transform-origin: 0% 100%;
 }
