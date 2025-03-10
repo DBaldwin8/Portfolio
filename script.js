@@ -24,20 +24,25 @@ window.onload = async function () {
     await document.querySelector("#about").scrollIntoView(true);
 }
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', fadeEventHandler);
+
+/******** Handlers ********/
+
+function fadeEventHandler() {
+    fadeIn(".hero-container", "nav", 500);
     setTimeout(function () { fadeIn(".hero-container", "#past") },500);
     setTimeout(function () { fadeIn(".hero-container", "#present") }, 1000);
     setTimeout(function () { fadeIn(".hero-container", "#future") }, 1500);
-
-});
+    window.removeEventListener('scroll', fadeEventHandler)
+}
 
 /******** Transitions ********/
 
-function fadeIn(passedElement, fadeElement) {
+function fadeIn(passedElement, fadeElement, offset = 0) {
     const scrollActivator = document.querySelector(passedElement);
     const elementToFade = document.querySelector(fadeElement);
 
-    if (document.body.scrollHeight > scrollActivator.scrollHeight) {
+    if (document.body.scrollHeight > scrollActivator.scrollHeight + offset) {
         elementToFade.style.opacity = 1;
         elementToFade.style.transform = "translate(0, 0)";
     }
