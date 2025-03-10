@@ -64,7 +64,8 @@ a {
 #present,
 #future {
     opacity: 0;
-    max-height: 0;
-    transition: opacity 2s, max-height 2s;
+    transition: opacity 5s, transform 1s;
     overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
 }
