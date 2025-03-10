@@ -25,9 +25,9 @@ window.onload = async function () {
 }
 
 window.addEventListener('scroll', function () {
-    setTimeout( function () {fadeIn(".hero-container", "#past")}, 500);
-    setTimeout( function () {fadeIn(".hero-container", "#present")}, 1000);
-    setTimeout( function () {fadeIn(".hero-container", "#future")}, 1500);
+    setTimeout(function () { fadeIn(".hero-container", "#past") }, 500);
+    setTimeout(function () { fadeIn(".hero-container", "#present") }, 1000);
+    setTimeout(function () { fadeIn(".hero-container", "#future") }, 1500);
 
 });
 
@@ -39,5 +39,6 @@ function fadeIn(passedElement, fadeElement) {
 
     if (document.body.scrollHeight > scrollActivator.scrollHeight) {
         elementToFade.style.opacity = 1;
+        elementToFade.style.maxHeight = "100%";
     }
 }
