@@ -33,6 +33,12 @@ nav {
     transition: opacity 5s;
 }
 
+.link-container {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 a {
     text-decoration: none;
 }
