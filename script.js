@@ -24,26 +24,46 @@ window.onload = async function () {
     await document.querySelector("#about").scrollIntoView(true);
 }
 
-window.addEventListener('scroll', fadeEventHandler);
+window.addEventListener('scroll', fadeAboutHandler);
+window.addEventListener('scroll', fadeNavHandler);
 
 /******** Handlers ********/
 
-function fadeEventHandler() {
-    fadeIn(".hero-container", "nav", 500);
-    setTimeout(function () { fadeIn(".hero-container", "#past") },500);
-    setTimeout(function () { fadeIn(".hero-container", "#present") }, 1000);
-    setTimeout(function () { fadeIn(".hero-container", "#future") }, 1500);
-    window.removeEventListener('scroll', fadeEventHandler)
+function fadeAboutHandler() {
+    setTimeout(function () { fadeAbout(".hero-container", "#past") },500);
+    setTimeout(function () { fadeAbout(".hero-container", "#present") }, 1000);
+    setTimeout(function () { fadeAbout(".hero-container", "#future") }, 1500);
+    window.removeEventListener('scroll', fadeAboutHandler)
+}
+
+function fadeNavHandler() {
+    fadeNav();
+    // if (fadeNav() = 1) {
+    //     window.removeEventListener('scroll', fadeNavHandler);
+    // }
 }
 
 /******** Transitions ********/
 
-function fadeIn(passedElement, fadeElement) {
+function fadeAbout(passedElement, fadeElement) {
     const scrollActivator = document.querySelector(passedElement);
     const elementToFade = document.querySelector(fadeElement);
 
     if (scrollActivator.getBoundingClientRect().bottom <= 0) {
-        elementToFade.style.opacity = 1;
+        elementToFade.style.opacity = "1";
         elementToFade.style.transform = "translate(0, 0)";
+    }
+}
+
+function fadeNav(passedElement, fadeElement) {
+    const scrollActivator = document.querySelector(passedElement);
+    const elementToFade = document.querySelector(fadeElement);
+
+    if (scrollActivator.getBoundingClientRect().bottom <= 0) {
+        elementToFade.style.opacity = "1";
+    }
+    console.log(elementToFade.style.opacity);
+    if (elementToFade.style.opacity = 1) {
+        return true;
     }
 }
