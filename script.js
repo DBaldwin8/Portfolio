@@ -37,10 +37,7 @@ function fadeAboutHandler() {
 }
 
 function fadeNavHandler() {
-    fadeNav();
-    // if (fadeNav() = 1) {
-    //     window.removeEventListener('scroll', fadeNavHandler);
-    // }
+    fadeNav(".hero-container", "nav");
 }
 
 /******** Transitions ********/
@@ -62,8 +59,8 @@ function fadeNav(passedElement, fadeElement) {
     if (scrollActivator.getBoundingClientRect().bottom <= 0) {
         elementToFade.style.opacity = "1";
     }
-    console.log(elementToFade.style.opacity);
+    
     if (elementToFade.style.opacity = 1) {
-        return true;
+        window.removeEventListener('scroll', fadeNavHandler);
     }
 }
