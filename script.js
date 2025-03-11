@@ -38,11 +38,11 @@ function fadeEventHandler() {
 
 /******** Transitions ********/
 
-function fadeIn(passedElement, fadeElement, offset = 0) {
+function fadeIn(passedElement, fadeElement) {
     const scrollActivator = document.querySelector(passedElement);
     const elementToFade = document.querySelector(fadeElement);
 
-    if (document.body.scrollHeight > scrollActivator.scrollHeight + offset) {
+    if (scrollActivator.getBoundingClientRect().bottom <= 0) {
         elementToFade.style.opacity = 1;
         elementToFade.style.transform = "translate(0, 0)";
     }
