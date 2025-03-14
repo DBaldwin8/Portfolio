@@ -14,12 +14,42 @@ async function typing(string, selector) {
     await delay(500); // delay to the next call.
 }
 
-/******** Onload instructions ********/
+/******** events ********/
 
 window.onload = async function () {
     await delay(1000);
     await typing("Hello World,", "#hello");
     await typing("My name is Darren Baldwin", "#name");
     await typing("and I am a FULL STACK DEVELOPER.", "#fst");
-    await document.querySelector(".next-div").scrollIntoView(true);
+    await document.querySelector("#about").scrollIntoView(true);
+}
+
+window.addEventListener('scroll', fadeAboutHandler);
+
+/******** Handlers ********/
+
+function fadeAboutHandler() {
+    const scrollActivator = document.querySelector(".hero-container");
+    const nav = document.querySelector("nav");
+
+    if (scrollActivator.getBoundingClientRect().bottom <= 0) {
+        fadeAbout("nav");
+        setTimeout(function () { fadeAbout("#past") }, 500);
+        setTimeout(function () { fadeAbout("#present") }, 1000);
+        setTimeout(function () { fadeAbout("#future") }, 1500);
+    }
+    
+    if (nav.style.opacity === "1") {
+        window.removeEventListener('scroll', fadeAboutHandler);
+    }
+}
+
+/******** Transitions ********/
+
+function fadeAbout(fadeElement) {
+    const elementToFade = document.querySelector(fadeElement);
+
+    elementToFade.style.opacity = "1";
+    elementToFade.style.transform = "translate(0, 0)";
+
 }

@@ -1,10 +1,10 @@
 * {
     scroll-behavior: smooth;
+    background-color: black;
+    color: lime;
 }
 
 .hero-container {
-    background-color: black;
-    color: lime;
     padding-top: 10vh;
     height: 100vh;
 }
@@ -15,14 +15,64 @@
     margin: 0px auto;
     padding: 20px;
     border-radius: 10px;
-    /* height: 400px; */
 }
 
-.hero-subcontainer h1{
+h1{
     font-size: 72pt;
     margin: 0;
 }
 
-.next-div {
+nav {
+    position: sticky;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+.link-container {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
+    padding-top: 50px;
+}
+
+.about-outer-container {  
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin: 100px;
+}
+
+.about-inner-container {
+    width: 350px;
+    text-align: center;
+}
+
+.about-subheading {
+    font-size: 2.5em;
+    margin-top: 30px;
+}
+
+#past,
+#present,
+#future {
+    opacity: 0;
+    transition: opacity 3s, transform 1s;
+    overflow: hidden;
+    transform: translate(0, 100px);
 }
