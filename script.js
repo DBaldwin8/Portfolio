@@ -30,6 +30,7 @@ window.addEventListener('scroll', fadeAboutHandler);
 
 function fadeAboutHandler() {
     const scrollActivator = document.querySelector(".hero-container");
+    const nav = document.querySelector("nav");
 
     if (scrollActivator.getBoundingClientRect().bottom <= 0) {
         fadeAbout("nav");
@@ -37,18 +38,18 @@ function fadeAboutHandler() {
         setTimeout(function () { fadeAbout("#present") }, 1000);
         setTimeout(function () { fadeAbout("#future") }, 1500);
     }
+    
+    if (nav.style.opacity === "1") {
+        window.removeEventListener('scroll', fadeAboutHandler);
+    }
 }
 
 /******** Transitions ********/
 
 function fadeAbout(fadeElement) {
     const elementToFade = document.querySelector(fadeElement);
-    const nav = document.querySelector("nav");
 
     elementToFade.style.opacity = "1";
     elementToFade.style.transform = "translate(0, 0)";
 
-    if (nav.style.opacity === "1") {
-        window.removeEventListener('scroll', fadeAboutHandler);
-    }
 }
