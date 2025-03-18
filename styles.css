@@ -45,8 +45,7 @@ a {
 
 .about-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     height: 100vh;
     padding-top: 50px;
 }
@@ -77,14 +76,23 @@ a {
     transform: translate(0, 100px);
 }
 
+section#skills{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .skills-container {
     border: 1px solid gray;
     border-radius: 10px;
-    max-width: 300px;
+    width: 300px;
+    margin: 20px 40px;
 }
 
 .skills-subheading{
-    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 30px
 }
 
 ul{
