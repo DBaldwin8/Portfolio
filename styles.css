@@ -76,3 +76,13 @@ a {
     overflow: hidden;
     transform: translate(0, 100px);
 }
+
+.skills-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.skills-subheading{
+    padding: 20px;
+}
