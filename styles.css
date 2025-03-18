@@ -102,12 +102,11 @@ ul{
 
 li{
     margin: 10px;
-    
+    transition: scale 1.5s;
+    transform-origin: center left;
 }
 
 li:hover{
     scale: 1.5;
-    transition: scale 1.5s;
-    transform-origin: center left;
     cursor: pointer;
 }
