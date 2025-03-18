@@ -97,13 +97,15 @@ section#skills{
 
 ul{
     list-style: none;
-    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 li{
     margin: 10px;
     transition: scale 1.5s;
     transform-origin: center left;
+    background-color: rgb(255, 255, 255, 0);
 }
 
 li:hover{
