@@ -97,8 +97,17 @@ section#skills{
 
 ul{
     list-style: none;
+    overflow: hidden;
 }
 
 li{
     margin: 10px;
+    
+}
+
+li:hover{
+    scale: 1.5;
+    transition: scale 1.5s;
+    transform-origin: center left;
+    cursor: pointer;
 }
