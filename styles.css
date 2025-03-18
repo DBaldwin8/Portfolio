@@ -86,3 +86,11 @@ a {
 .skills-subheading{
     padding: 20px;
 }
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin: 10px;
+}
