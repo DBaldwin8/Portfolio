@@ -24,7 +24,7 @@ window.onload = async function () {
     await typing("My name is Darren Baldwin", "#name");
     await typing("and I am a FULL STACK DEVELOPER.", "#fst");
     if (stopScrollPosition.getBoundingClientRect().bottom > 0) {
-    await document.querySelector("#about").scrollIntoView(true);
+    document.querySelector("#about").scrollIntoView(true);
     }
 }
 
