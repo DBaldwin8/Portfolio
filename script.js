@@ -17,11 +17,15 @@ async function typing(string, selector) {
 /******** events ********/
 
 window.onload = async function () {
+    const stopScrollPosition = document.querySelector(".hero-container")
+
     await delay(1000);
     await typing("Hello World,", "#hello");
     await typing("My name is Darren Baldwin", "#name");
     await typing("and I am a FULL STACK DEVELOPER.", "#fst");
+    if (stopScrollPosition.getBoundingClientRect().bottom > 0) {
     await document.querySelector("#about").scrollIntoView(true);
+    }
 }
 
 window.addEventListener('scroll', fadeAboutHandler);
