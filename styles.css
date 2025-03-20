@@ -112,3 +112,16 @@ li:hover{
     scale: 1.5;
     cursor: pointer;
 }
+
+.hidden{
+    margin: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+li:hover + .hidden{
+    opacity: 1;
+    max-height: 50px;
+    transition: max-height 2.5s, opacity 3s;
+}
