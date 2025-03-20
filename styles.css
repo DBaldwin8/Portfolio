@@ -31,6 +31,11 @@ nav {
     height: 50px;
     opacity: 0;
     transition: opacity 5s;
+    z-index: 2;
+}
+
+.heading-container > h3{
+    margin: 10px auto;
 }
 
 .link-container {
