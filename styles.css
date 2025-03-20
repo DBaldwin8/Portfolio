@@ -139,3 +139,9 @@ li:hover + .hidden{
 .summary {
     margin: 10px;
 }
+
+#frontend {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+    transform: translate(-100px, 0);
+}

@@ -29,6 +29,7 @@ window.onload = async function () {
 }
 
 window.addEventListener('scroll', fadeAboutHandler);
+window.addEventListener('scroll', fadeSkillsHandler);
 
 /******** Handlers ********/
 
@@ -37,10 +38,10 @@ function fadeAboutHandler() {
     const nav = document.querySelector("nav");
 
     if (scrollActivator.getBoundingClientRect().bottom <= 0) {
-        fadeAbout("nav");
-        setTimeout(function () { fadeAbout("#past") }, 500);
-        setTimeout(function () { fadeAbout("#present") }, 1000);
-        setTimeout(function () { fadeAbout("#future") }, 1500);
+        fadeInAndTranslate("nav");
+        setTimeout(function () { fadeInAndTranslate("#past") }, 500);
+        setTimeout(function () { fadeInAndTranslate("#present") }, 1000);
+        setTimeout(function () { fadeInAndTranslate("#future") }, 1500);
     }
     
     if (nav.style.opacity === "1") {
@@ -48,12 +49,19 @@ function fadeAboutHandler() {
     }
 }
 
+function fadeSkillsHandler() {
+    const scrollActivator = document.querySelector("#skills");
+
+    if (Math.floor(scrollActivator.getBoundingClientRect().bottom) <= window.innerHeight) {
+        fadeInAndTranslate("#frontend");
+    }
+}
+
 /******** Transitions ********/
 
-function fadeAbout(fadeElement) {
+function fadeInAndTranslate(fadeElement) {
     const elementToFade = document.querySelector(fadeElement);
 
     elementToFade.style.opacity = "1";
     elementToFade.style.transform = "translate(0, 0)";
-
 }
