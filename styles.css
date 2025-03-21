@@ -140,7 +140,12 @@ li:hover + .hidden{
     margin: 10px;
 }
 
-#frontend {
+#frontend,
+#backend,
+#methodologies,
+#fullstack,
+#tools 
+{
     opacity: 0;
     transition: opacity 1s, transform 1s;
     transform: translate(-100px, 0);
