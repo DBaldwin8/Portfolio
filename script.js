@@ -49,11 +49,18 @@ function fadeAboutHandler() {
     }
 }
 
-function fadeSkillsHandler() {
-    const scrollActivator = document.querySelector("#skills");
+async function fadeSkillsHandler() {
+    const elements = ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"];
+    const lastElement = document.querySelector(elements[elements.length-1]);
 
-    if (Math.floor(scrollActivator.getBoundingClientRect().bottom) <= window.innerHeight) {
-        fadeInAndTranslate("#frontend");
+    elements.forEach(element => {
+        if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
+            fadeInAndTranslate(element);
+        }
+    });
+
+    if (lastElement.opacity === 1) {
+        window.removeEventListener(fadeSkillsHandler);
     }
 }
 
