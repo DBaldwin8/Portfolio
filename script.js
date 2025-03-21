@@ -49,13 +49,13 @@ function fadeAboutHandler() {
     }
 }
 
-async function fadeSkillsHandler() {
+function fadeSkillsHandler() {
     const elements = ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"];
     const lastElement = document.querySelector(elements[elements.length-1]);
 
-    elements.forEach(element => {
+    elements.forEach( (element, i) => {
         if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
-            fadeInAndTranslate(element);
+                setTimeout(() => fadeInAndTranslate(element), (500*i));
         }
     });
 
