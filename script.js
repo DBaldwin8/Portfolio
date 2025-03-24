@@ -24,7 +24,7 @@ window.onload = async function () {
     await typing("My name is Darren Baldwin", "#name");
     await typing("and I am a FULL STACK DEVELOPER.", "#fst");
     if (stopScrollPosition.getBoundingClientRect().bottom > 0) {
-    document.querySelector("#about").scrollIntoView(true);
+        document.querySelector("#about").scrollIntoView(true);
     }
 }
 
@@ -51,16 +51,16 @@ function fadeAboutHandler() {
 
 function fadeSkillsHandler() {
     const elements = ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"];
-    const lastElement = document.querySelector(elements[elements.length-1]);
+    const lastElement = document.querySelector(elements[elements.length - 1]);
 
-    elements.forEach( (element, i) => {
+    elements.forEach((element, i) => {
         if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
-                setTimeout(() => fadeInAndTranslate(element), (500*i));
+            setTimeout(() => fadeInAndTranslate(element), (i * 200));
         }
     });
 
-    if (lastElement.opacity === 1) {
-        window.removeEventListener(fadeSkillsHandler);
+    if (lastElement.style.opacity === "1") {
+        window.removeEventListener('scroll', fadeSkillsHandler);
     }
 }
 
