@@ -50,8 +50,36 @@ function fadeAboutHandler() {
 }
 
 function fadeSkillsHandler() {
-    const elements = ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"];
-    const lastElement = document.querySelector(elements[elements.length - 1]);
+    const elements = { 
+        ids:["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"],
+        positions: [],
+        order : {}
+    };
+
+    const lastElement = document.querySelector(elements.ids[elements.ids.length-1]);
+
+    // for (const element in elements.ids){
+    //     elements.positions.push(document.querySelector(element).offsetTop);
+    // }
+
+    function returnPosition(element) {
+        return document.querySelector(element).offsetTop
+    }
+
+    elements.positions = elements.ids.map(returnPosition)
+
+    // for (const position in elements.positions){
+    // }
+    
+    // if the positions matches another entry push both ids to an array in elements.matches
+    // PUSH THE IDS TO MATCHES USING HEIGHT AS A KEY!!!
+
+    elements.positions.forEach( (position) => {
+        if (order[position]) //check position exist {add the id to the position}
+
+                            //else create the position and add the id.
+
+    });
 
     elements.forEach((element, i) => {
         if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
