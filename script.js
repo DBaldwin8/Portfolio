@@ -58,10 +58,6 @@ function fadeSkillsHandler() {
 
     const lastElement = document.querySelector(elements.ids[elements.ids.length - 1]);
 
-    // for (const element in elements.ids){
-    //     elements.positions.push(document.querySelector(element).offsetTop);
-    // }
-
     function returnPosition(element) {
         return document.querySelector(element).offsetTop
     }
