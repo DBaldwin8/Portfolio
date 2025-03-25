@@ -53,7 +53,7 @@ function fadeSkillsHandler() {
     const elements = {
         ids: ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"],
         positions: [],
-        grouping: {}
+        groups: {}
     };
 
     const lastElement = document.querySelector(elements.ids[elements.ids.length - 1]);
@@ -75,23 +75,36 @@ function fadeSkillsHandler() {
     // PUSH THE IDS TO MATCHES USING HEIGHT AS A KEY!!!
 
     elements.positions.forEach((position, i) => {
-        if (position in elements.grouping) {
-            elements.grouping[position].push(elements.ids[i])
-        }  else {
-            elements.grouping[position] = [elements.ids[i]];
+        if (position in elements.groups) {
+            elements.groups[position].push(elements.ids[i])
+        } else {
+            elements.groups[position] = [elements.ids[i]];
         }
         // check position exist {add the id to the position} else create the position and add the id.
     });
 
-    elements.forEach((element, i) => {
-        if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
-            setTimeout(() => fadeInAndTranslate(element), (i * 200));
+    elements.groups.forEach((group) => {
+        if (Math.floor(document.querySelector(group[0]).getBoundingClientRect().bottom) <= window.innerHeight) {
+            for (let i = 0; i < group.length; i++) {
+                setTimeout(() => fadeInAndTranslate(group[i]), (i * 200));
+            }
         }
-    });
 
-    if (lastElement.style.opacity === "1") {
-        window.removeEventListener('scroll', fadeSkillsHandler);
-    }
+        if (lastElement.style.opacity === "1") {
+            window.removeEventListener('scroll', fadeSkillsHandler);
+        }
+    })
+
+
+    // elements.forEach((element, i) => {
+    //     if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
+    //         setTimeout(() => fadeInAndTranslate(element), (i * 200));
+    //     }
+    // });
+
+    // if (lastElement.style.opacity === "1") {
+    //     window.removeEventListener('scroll', fadeSkillsHandler);
+    // }
 }
 
 /******** Transitions ********/
