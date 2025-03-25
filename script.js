@@ -46,7 +46,6 @@ function fadeAboutHandler() {
             window.removeEventListener('scroll', fadeAboutHandler);
         }
     }
-
 }
 
 function fadeSkillsHandler() {
@@ -60,7 +59,7 @@ function fadeSkillsHandler() {
 
     function returnPosition(element) {
         return document.querySelector(element).offsetTop
-    }
+    };
 
     elements.positions = elements.ids.map(returnPosition)
 
@@ -81,7 +80,6 @@ function fadeSkillsHandler() {
                 window.removeEventListener('scroll', fadeSkillsHandler);
             }
         }
-
     });
 }
 
@@ -92,4 +90,46 @@ function fadeInAndTranslate(fadeElement) {
 
     elementToFade.style.opacity = "1";
     elementToFade.style.transform = "translate(0, 0)";
+}
+
+/******** Helpers ********/
+
+
+function returnYPosition(element) {
+    return document.querySelector(element).offsetTop
+};
+
+function groupElementsByYPosition(elementsArray) {
+    const elements = {
+        groups : {},
+    };
+    const positions = elementsArray.map(returnYPosition)
+
+    positions.forEach((position, i) => {
+        if (position in elements.groups) {
+            elements.groups[position].push(elementsArray[i])
+        } else {
+            elements.groups[position] = [elementsArray[i]];
+        }
+    });
+
+    elements.lastElement = elementsArray.pop();
+
+    return elements;
+}
+
+function setFadeDelays(elementsObject, delayBetweenElements, handler) {
+    Object.values(elementsObject.groups).forEach((group) => {
+    
+        const lastElement = document.querySelector(elementsObject.lastElement);
+
+        if (Math.floor(document.querySelector(group[0]).getBoundingClientRect().bottom) <= window.innerHeight) {
+            for (let i = 0; i < group.length; i++) {
+                setTimeout(() => fadeInAndTranslate(group[i]), (i * delayBetweenElements));
+            }
+            if (lastElement.style.opacity === "1") {
+                window.removeEventListener('scroll', handler);
+            }
+        }
+    });
 }
