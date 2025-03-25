@@ -42,11 +42,11 @@ function fadeAboutHandler() {
         setTimeout(function () { fadeInAndTranslate("#past") }, 500);
         setTimeout(function () { fadeInAndTranslate("#present") }, 1000);
         setTimeout(function () { fadeInAndTranslate("#future") }, 1500);
+        if (nav.style.opacity === "1") {
+            window.removeEventListener('scroll', fadeAboutHandler);
+        }
     }
 
-    if (nav.style.opacity === "1") {
-        window.removeEventListener('scroll', fadeAboutHandler);
-    }
 }
 
 function fadeSkillsHandler() {
@@ -68,19 +68,12 @@ function fadeSkillsHandler() {
 
     elements.positions = elements.ids.map(returnPosition)
 
-    // for (const position in elements.positions){
-    // }
-
-    // if the positions matches another entry push both ids to an array in elements.matches
-    // PUSH THE IDS TO MATCHES USING HEIGHT AS A KEY!!!
-
     elements.positions.forEach((position, i) => {
         if (position in elements.groups) {
             elements.groups[position].push(elements.ids[i])
         } else {
             elements.groups[position] = [elements.ids[i]];
         }
-        // check position exist {add the id to the position} else create the position and add the id.
     });
 
     Object.values(elements.groups).forEach((group) => {
@@ -88,11 +81,11 @@ function fadeSkillsHandler() {
             for (let i = 0; i < group.length; i++) {
                 setTimeout(() => fadeInAndTranslate(group[i]), (i * 200));
             }
+            if (lastElement.style.opacity === "1") {
+                window.removeEventListener('scroll', fadeSkillsHandler);
+            }
         }
 
-        if (lastElement.style.opacity === "1") {
-            window.removeEventListener('scroll', fadeSkillsHandler);
-        }
     });
 }
 
