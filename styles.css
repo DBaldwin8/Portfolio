@@ -130,6 +130,10 @@ li:hover{
     opacity: 0;
 }
 
+li.hidden{
+    margin: 0;
+}
+
 li:hover + .hidden{
     max-height: 100px;
     opacity: 1;
