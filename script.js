@@ -39,13 +39,9 @@ function fadeAboutHandler() {
 
     if (scrollActivator.getBoundingClientRect().bottom <= 0) {
         fadeInAndTranslate("nav");
-        setTimeout(function () { fadeInAndTranslate("#past") }, 500);
-        setTimeout(function () { fadeInAndTranslate("#present") }, 1000);
-        setTimeout(function () { fadeInAndTranslate("#future") }, 1500);
-        if (nav.style.opacity === "1") {
-            window.removeEventListener('scroll', fadeAboutHandler);
-        }
     }
+    setFadeDelays(groupElementsByYPosition(["#past", "#present", "#future"]), 500, fadeAboutHandler);
+
 }
 
 function fadeSkillsHandler() {
@@ -70,7 +66,7 @@ function returnYPosition(element) {
 
 function groupElementsByYPosition(elementsArray) {
     const elements = {
-        groups : {},
+        groups: {},
     };
     const positions = elementsArray.map(returnYPosition)
 
@@ -89,7 +85,7 @@ function groupElementsByYPosition(elementsArray) {
 
 function setFadeDelays(elementsObject, delayBetweenElements, handler) {
     Object.values(elementsObject.groups).forEach((group) => {
-    
+
         const lastElement = document.querySelector(elementsObject.lastElement);
 
         if (Math.floor(document.querySelector(group[0]).getBoundingClientRect().bottom) <= window.innerHeight) {
