@@ -83,7 +83,7 @@ function fadeSkillsHandler() {
         // check position exist {add the id to the position} else create the position and add the id.
     });
 
-    elements.groups.forEach((group) => {
+    Object.values(elements.groups).forEach((group) => {
         if (Math.floor(document.querySelector(group[0]).getBoundingClientRect().bottom) <= window.innerHeight) {
             for (let i = 0; i < group.length; i++) {
                 setTimeout(() => fadeInAndTranslate(group[i]), (i * 200));
@@ -93,18 +93,7 @@ function fadeSkillsHandler() {
         if (lastElement.style.opacity === "1") {
             window.removeEventListener('scroll', fadeSkillsHandler);
         }
-    })
-
-
-    // elements.forEach((element, i) => {
-    //     if (Math.floor(document.querySelector(element).getBoundingClientRect().bottom) <= window.innerHeight) {
-    //         setTimeout(() => fadeInAndTranslate(element), (i * 200));
-    //     }
-    // });
-
-    // if (lastElement.style.opacity === "1") {
-    //     window.removeEventListener('scroll', fadeSkillsHandler);
-    // }
+    });
 }
 
 /******** Transitions ********/
