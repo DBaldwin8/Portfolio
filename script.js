@@ -78,7 +78,7 @@ function fadeSkillsHandler() {
         if (position in elements.grouping) {
             elements.grouping[position].push(elements.ids[i])
         }  else {
-            elements.grouping[position] = elements.ids[i];
+            elements.grouping[position] = [elements.ids[i]];
         }
         // check position exist {add the id to the position} else create the position and add the id.
     });
