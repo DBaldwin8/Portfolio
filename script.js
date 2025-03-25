@@ -49,38 +49,7 @@ function fadeAboutHandler() {
 }
 
 function fadeSkillsHandler() {
-    const elements = {
-        ids: ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"],
-        positions: [],
-        groups: {}
-    };
-
-    const lastElement = document.querySelector(elements.ids[elements.ids.length - 1]);
-
-    function returnPosition(element) {
-        return document.querySelector(element).offsetTop
-    };
-
-    elements.positions = elements.ids.map(returnPosition)
-
-    elements.positions.forEach((position, i) => {
-        if (position in elements.groups) {
-            elements.groups[position].push(elements.ids[i])
-        } else {
-            elements.groups[position] = [elements.ids[i]];
-        }
-    });
-
-    Object.values(elements.groups).forEach((group) => {
-        if (Math.floor(document.querySelector(group[0]).getBoundingClientRect().bottom) <= window.innerHeight) {
-            for (let i = 0; i < group.length; i++) {
-                setTimeout(() => fadeInAndTranslate(group[i]), (i * 200));
-            }
-            if (lastElement.style.opacity === "1") {
-                window.removeEventListener('scroll', fadeSkillsHandler);
-            }
-        }
-    });
+    setFadeDelays(groupElementsByYPosition(["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"]), 200, fadeSkillsHandler);
 }
 
 /******** Transitions ********/
