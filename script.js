@@ -43,20 +43,20 @@ function fadeAboutHandler() {
         setTimeout(function () { fadeInAndTranslate("#present") }, 1000);
         setTimeout(function () { fadeInAndTranslate("#future") }, 1500);
     }
-    
+
     if (nav.style.opacity === "1") {
         window.removeEventListener('scroll', fadeAboutHandler);
     }
 }
 
 function fadeSkillsHandler() {
-    const elements = { 
-        ids:["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"],
+    const elements = {
+        ids: ["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"],
         positions: [],
-        order : {}
+        grouping: {}
     };
 
-    const lastElement = document.querySelector(elements.ids[elements.ids.length-1]);
+    const lastElement = document.querySelector(elements.ids[elements.ids.length - 1]);
 
     // for (const element in elements.ids){
     //     elements.positions.push(document.querySelector(element).offsetTop);
@@ -70,15 +70,17 @@ function fadeSkillsHandler() {
 
     // for (const position in elements.positions){
     // }
-    
+
     // if the positions matches another entry push both ids to an array in elements.matches
     // PUSH THE IDS TO MATCHES USING HEIGHT AS A KEY!!!
 
-    elements.positions.forEach( (position) => {
-        if (order[position]) //check position exist {add the id to the position}
-
-                            //else create the position and add the id.
-
+    elements.positions.forEach((position, i) => {
+        if (position in elements.grouping) {
+            elements.grouping[position].push(elements.ids[i])
+        }  else {
+            elements.grouping[position] = elements.ids[i];
+        }
+        // check position exist {add the id to the position} else create the position and add the id.
     });
 
     elements.forEach((element, i) => {
