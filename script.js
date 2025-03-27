@@ -59,7 +59,6 @@ function fadeInAndTranslate(fadeElement) {
 
 /******** Helpers ********/
 
-
 function returnYPosition(element) {
     return document.querySelector(element).offsetTop
 };
@@ -78,7 +77,7 @@ function groupElementsByLine(elementsArray) {
             elements.groups[position] = [elementsArray[i]];
         }
     });
-    const lastElementPosition = (Math.max(...(Object.keys(elements.groups).map(Number))));
+    const lastElementPosition = Math.max(...(Object.keys(elements.groups).map(Number)));
     
     elements.lastElementId = Object.values(elements.groups[lastElementPosition]).at(-1);
 
