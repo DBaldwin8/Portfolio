@@ -95,7 +95,7 @@ function setFadeDelays(elementsArray, delayBetweenElements, handler) {
                 setTimeout(() => fadeInAndTranslate(group[i]), (i * delayBetweenElements));
             }
             if (lastElement.style.opacity === "1") {
-                window.removeEventListener('scroll', handler);                
+                window.removeEventListener('scroll', handler);
             }
         }
     });
