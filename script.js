@@ -67,7 +67,7 @@ function returnYPosition(element) {
 function groupElementsByLine(elementsArray) {
     const elements = {
         groups: {},
-        lastElementId: undefined
+        lastElementId: ""
     };
     const positions = elementsArray.map(returnYPosition)
 
