@@ -40,12 +40,12 @@ function fadeAboutHandler() {
     if (scrollActivator.getBoundingClientRect().bottom <= 0) {
         fadeInAndTranslate("nav");
     }
-    setFadeDelays(groupElementsByYPosition(["#past", "#present", "#future"]), 500, fadeAboutHandler);
+    setFadeDelays(["#past", "#present", "#future"], 500, fadeAboutHandler);
 
 }
 
 function fadeSkillsHandler() {
-    setFadeDelays(groupElementsByYPosition(["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"]), 200, fadeSkillsHandler);
+    setFadeDelays(["#frontend", "#backend", "#methodologies", "#fullstack", "#tools"], 200, fadeSkillsHandler);
 }
 
 /******** Transitions ********/
@@ -64,9 +64,10 @@ function returnYPosition(element) {
     return document.querySelector(element).offsetTop
 };
 
-function groupElementsByYPosition(elementsArray) {
+function groupElementsByLine(elementsArray) {
     const elements = {
         groups: {},
+        lastElementId: undefined
     };
     const positions = elementsArray.map(returnYPosition)
 
@@ -77,23 +78,24 @@ function groupElementsByYPosition(elementsArray) {
             elements.groups[position] = [elementsArray[i]];
         }
     });
-
-    elements.lastElement = elementsArray.pop();
+    const lastElementPosition = (Math.max(...(Object.keys(elements.groups).map(Number))));
+    
+    elements.lastElementId = Object.values(elements.groups[lastElementPosition]).at(-1);
 
     return elements;
 }
 
-function setFadeDelays(elementsObject, delayBetweenElements, handler) {
-    Object.values(elementsObject.groups).forEach((group) => {
+function setFadeDelays(elementsArray, delayBetweenElements, handler) {
+    const elements = groupElementsByLine(elementsArray)
+    const lastElement = document.querySelector(elements.lastElementId);
 
-        const lastElement = document.querySelector(elementsObject.lastElement);
-
+    Object.values(elements.groups).forEach((group) => {
         if (Math.floor(document.querySelector(group[0]).getBoundingClientRect().bottom) <= window.innerHeight) {
             for (let i = 0; i < group.length; i++) {
                 setTimeout(() => fadeInAndTranslate(group[i]), (i * delayBetweenElements));
             }
             if (lastElement.style.opacity === "1") {
-                window.removeEventListener('scroll', handler);
+                window.removeEventListener('scroll', handler);                
             }
         }
     });
